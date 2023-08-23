@@ -32,6 +32,10 @@
     let result = 7 + 13 / 9 + 7;
     let result2 = 100 / 2 * 6;
 
+    result *= result2;
+    const finalResult = result.toFixed(2);
+    const finalNumber = typeof finalResult === "string" ? Number(finalResult) : finalResult;
+
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
