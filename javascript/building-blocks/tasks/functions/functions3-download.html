@@ -30,6 +30,17 @@
     const para = document.createElement('p');
 
     // Add your code here
+    function chooseName(names) {
+      const randomIndex = random(0, names.length);
+      return names[randomIndex];
+    }
+
+    function random(start, end) {
+      return start + Math.floor(Math.random() * (end - start));
+    }
+  
+    const name = chooseName(names, para);
+    para.textContent = name;
 
     // Don't edit the code below here!
 
