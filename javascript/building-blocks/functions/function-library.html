@@ -39,6 +39,19 @@
       return num;
     }
 
+
+    function sqrt(num) {
+      return Math.sqrt(num);
+    }
+
+    function cbrt(num) {
+      return Math.pow(num, 1 / 3);
+    }
+
+    function circumference(radius) {
+      return 2 * Math.PI * radius;
+    }
+
     input.addEventListener("change", () => {
       const num = parseFloat(input.value);
       if (isNaN(num)) {
@@ -47,6 +60,10 @@
         para.textContent = `${num} squared is ${squared(num)}. `;
         para.textContent += `${num} cubed is ${cubed(num)}. `;
         para.textContent += `${num} factorial is ${factorial(num)}. `;
+        para.textContent += `Square root of ${num} is ${sqrt(num)}. `;
+        para.textContent += `Cube root of ${num} is ${cbrt(num)}. `;
+        para.textContent += `Circumference of a circle with radius`
+                          + ` ${num} is ${circumference(num)}. `;
       }
     });
 
