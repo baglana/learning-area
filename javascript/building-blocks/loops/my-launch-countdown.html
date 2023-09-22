@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Launch countdown example</title>
+    <style>
+      
+      html {
+        font-family: sans-serif;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .a11y-label {
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
+      }
+
+      body {
+        margin: 10px;
+        background: #f5f9fa;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <script>
+
+    let output = document.querySelector('.output');
+    output.innerHTML = '';
+
+    let i = 10;
+
+    while (i >= 0) {
+      const para = document.createElement('p');
+
+      para.textContent =
+        (i === 10) ? "Countdown 10" :
+        (i > 0) ? i :
+        "Blast off!";
+      
+      output.appendChild(para);
+
+      i--;
+    }
+      
+    </script>
+
+  </body>
+</html>
