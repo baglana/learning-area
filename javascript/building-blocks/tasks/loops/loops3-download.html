@@ -41,7 +41,12 @@
 
 
     // Add your code here
-
+    while (i > 1) {
+      if (isPrime(i)) {
+        para.textContent += `${i} `
+      }
+      i--;
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
