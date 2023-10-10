@@ -43,9 +43,13 @@
     // Add your code here
     for (let i = 0; i < phonebook.length; i++) {
       if (phonebook[i].name === name) {
-        para.textContent = `Name: ${phonebook[i].name}\n`
-          + ` Number: ${phonebook[i].number}`;
+        para.textContent = `${phonebook[i].name}'s \
+        number is ${phonebook[i].number}`;
         break;
+      }
+
+      if (i === phonebook.length - 1) {
+        para.textContent = `${name} was not found in phonebook.`;
       }
     }
 
