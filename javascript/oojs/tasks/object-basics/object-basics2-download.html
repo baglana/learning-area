@@ -29,7 +29,26 @@
     let bandInfo;
 
     // Add your code here
+    const band = {
+      name: 'AKMU',
+      nationality: 'South Korea',
+      genre: 'Pop',
+      members: 2,
+      formed: 2014,
+      split: false,
+      albums: [
+        {name: 'Play', released: 2014},
+        {name: 'Winter', released: 2017},
+        {name: 'Sailing', released: 2019},
+      ]
+    };
 
+    bandInfo = `${band.name} is a ${band.nationality}n band \
+    formed in ${band.formed} and is still active.
+    They sing ${band.genre} songs.
+    ${band.name} released their first album \
+    ${band['albums'][0]['name']} \
+    in ${band.albums[0].released}.`;
 
     // Don't edit the code below here!
 
