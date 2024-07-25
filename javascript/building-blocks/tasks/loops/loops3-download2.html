@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <title>Functions: Task 3</title>
+    <title>Loops: Task 3</title>
     <style>
       p {
         color: purple;
@@ -26,26 +26,31 @@
 
   </body>
   <script>
-    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    let i = 500;
     const para = document.createElement('p');
 
-    // Add your code here
-    function chooseName(names) {
-      const randomIndex = random(0, names.length);
-      return names[randomIndex];
+    function isPrime(num) {
+      for(let i = 2; i < num; i++) {
+        if(num % i === 0) {
+          return false;
+        }
+      }
+
+      return true;
     }
 
-    function random(start, end) {
-      return start + Math.floor(Math.random() * (end - start));
+
+    // Add your code here
+    while (i > 1) {
+      if (isPrime(i)) {
+        para.textContent += `${i} `;
+      }
+
+      i--;
     }
-  
-    const name = chooseName(names);
-    para.textContent = name;
 
     // Don't edit the code below here!
-
     const section = document.querySelector('section');
-
     section.appendChild(para);
   </script>
 

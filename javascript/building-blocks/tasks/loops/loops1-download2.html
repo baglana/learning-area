@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <title>Functions: Task 3</title>
+    <title>Loops: Task 1</title>
     <style>
       p {
         color: purple;
@@ -26,27 +26,19 @@
 
   </body>
   <script>
-    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
-    const para = document.createElement('p');
+    const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+    const list = document.createElement('ul');
 
     // Add your code here
-    function chooseName(names) {
-      const randomIndex = random(0, names.length);
-      return names[randomIndex];
+    for (const item of myArray) {
+      const listItem = document.createElement('li');
+      listItem.textContent = item;
+      list.appendChild(listItem);
     }
-
-    function random(start, end) {
-      return start + Math.floor(Math.random() * (end - start));
-    }
-  
-    const name = chooseName(names);
-    para.textContent = name;
-
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
-
-    section.appendChild(para);
+    section.appendChild(list);
   </script>
 
 </html>
