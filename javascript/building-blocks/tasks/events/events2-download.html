@@ -51,6 +51,27 @@
 
     // Add your code here
 
+    const delta = 30;
+
+    window.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case 'w':
+          y -= delta;
+          break;
+        case 'a':
+          x -= delta;
+          break;
+        case 's':
+          y += delta;
+          break;
+        case 'd':
+          x += delta;
+          break;
+      }
+
+      drawCircle(x, y, size);
+    });
+
   </script>
   </body>
   

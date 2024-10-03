@@ -31,7 +31,15 @@
   <script>
     const btn = document.querySelector('.off');
 
-    // Add your code here
+    function handleClick(e) {
+      if (e.target.textContent.split(' ').at(-1) === 'off') {
+        e.target.textContent = 'Machine is on';
+      } else {
+        e.target.textContent = 'Machine is off';
+      }
+    }
+
+    btn.addEventListener('click', handleClick);
 
   </script>
 
